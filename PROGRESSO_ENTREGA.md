@@ -62,7 +62,11 @@ uma credential helper). **Isso não bloqueia o trabalho desta noite**: todos os 
 
 ## PRIORIDADE 4 — Deploy
 
-- [ ] **NÃO EXECUTAR** — aguardando confirmação do cliente amanhã de manhã.
+- [x] Login na Vercel autorizado pelo usuário (conta `nexuscreativevix`)
+- [x] Deploy de produção publicado via `vercel --prod`
+- [x] Link final verificado ao vivo (200 OK, sem erros de console, home e política de privacidade)
+
+**Link de produção:** https://siac-website-main.vercel.app
 
 ---
 
