@@ -28,6 +28,9 @@ yarn-error.log*
 
 # local env files
 .env
+
+# QA screenshots generated during the overnight review (not site assets)
+/mobile-screenshots
 .env*.local
 
 # vercel

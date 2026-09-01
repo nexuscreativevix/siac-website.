@@ -39,14 +39,16 @@ uma credential helper). **Isso não bloqueia o trabalho desta noite**: todos os 
 
 ## PRIORIDADE 2 — Responsividade Mobile e Tablet
 
-- [ ] Teste em mobile (viewport ~375px)
-- [ ] Teste em tablet (viewport ~768px)
-- [ ] Correções de layout aplicadas (se necessário)
-- [ ] Conferido em modo claro e escuro no mobile/tablet
-- [ ] Screenshot mobile — Hero
-- [ ] Screenshot mobile — Soluções
-- [ ] Screenshot mobile — Contato
-- [ ] Commit local da Prioridade 2
+- [x] Teste em mobile (375px) — testado ao vivo: Hero, menu, Soluções (accordion + modal "Saiba mais"), Ciclo SIAC, Casos de Sucesso, Manifesto, Contato (formulário), Footer, Política de Privacidade
+- [x] Teste em tablet (768px) — **bug real encontrado e corrigido**: em 768px a navbar desktop (logo + 4 links + toggle + CTA) transbordava da tela, cortando o botão "Falar Conosco" e criando scroll horizontal
+- [x] Correções de layout aplicadas:
+  - **Bug crítico de navegação mobile**: o menu (Soluções/Casos de Sucesso/Quem Somos/Contato) ficava 100% inacessível no mobile — não existia nenhum substituto para a lista `hidden md:flex`. Criado menu hambúrguer (`src/components/Nav.tsx`) com painel modal, testado (abre, navega, fecha).
+  - **Bug de overflow no tablet**: breakpoint do menu desktop elevado de `md` (768px) para `lg` (1024px) — agora tablet usa o mesmo hambúrguer do mobile em vez de tentar caber tudo em uma linha.
+- [x] Conferido em modo claro e escuro no mobile/tablet — ambos testados ao vivo no navegador
+- [x] Screenshot mobile — Hero (enviado ao usuário)
+- [x] Screenshot mobile — Soluções (enviado ao usuário)
+- [x] Screenshot mobile — Contato (enviado ao usuário)
+- [x] Commit local da Prioridade 2
 
 ## PRIORIDADE 3 — Otimização e Bugs Gerais
 
