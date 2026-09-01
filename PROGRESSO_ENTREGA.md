@@ -52,13 +52,13 @@ uma credential helper). **Isso não bloqueia o trabalho desta noite**: todos os 
 
 ## PRIORIDADE 3 — Otimização e Bugs Gerais
 
-- [ ] Build de produção rodado
-- [ ] Zero erros no console confirmado
-- [ ] Otimização de imagens/componentes pesados (sem mudar visual aprovado)
-- [ ] Varredura de bugs visuais (sobreposição, corte, animação travada, contraste)
-- [ ] Links do menu testados (Soluções, Casos de Sucesso, Quem Somos, Contato)
-- [ ] Botão WhatsApp testado
-- [ ] Commit local da Prioridade 3
+- [x] Build de produção rodado (`npm run build`) — compilou limpo, 0 erros
+- [x] Zero erros no console confirmado — testado em aba nova do navegador, sem nenhum erro
+- [x] Otimização de imagens/componentes pesados: adicionado `loading="lazy"` + `decoding="async"` nas imagens placeholder (Hero/Manifesto/Soluções), sem alteração visual; eliminado o único warning de lint do build (`<img>` sem otimização no modal de depoimentos, mesma exceção já documentada em outros lugares do projeto)
+- [x] Varredura de bugs visuais — nenhuma sobreposição/corte/animação travada encontrada em desktop, tablet ou mobile, claro e escuro
+- [x] Links do menu testados (Soluções, Casos de Sucesso, Quem Somos, Contato) — **bug real encontrado e corrigido**: o link "Casos de Sucesso" não navegava (a seção tinha `overflow-hidden` aplicado diretamente no elemento com o `id`, o que quebra a navegação por âncora nesse navegador/engine). Corrigido em `src/components/SuccessStories.tsx`, testado e confirmado funcionando junto com os outros 3 links.
+- [x] Botão WhatsApp testado — URL, número e mensagem pré-preenchida corretos, abre em nova aba com `rel="noopener noreferrer"`
+- [x] Commit local da Prioridade 3
 
 ## PRIORIDADE 4 — Deploy
 

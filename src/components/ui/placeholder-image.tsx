@@ -20,6 +20,8 @@ export function PlaceholderImage({ src, alt }: PlaceholderImageProps) {
       <img
         src={src}
         alt={alt}
+        loading="lazy"
+        decoding="async"
         className="h-full w-full object-cover [filter:saturate(0.55)]"
       />
       <div className="absolute inset-0 bg-brand-graphite/50 dark:bg-black/55" />

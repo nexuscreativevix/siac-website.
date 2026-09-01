@@ -281,6 +281,7 @@ export const CardCarousel: React.FC<CarouselProps> = ({
                     (same reasoning as the card poster above) — an honest
                     "em produção" placeholder instead of a <video> with
                     controls that would silently do nothing. */}
+                {/* eslint-disable-next-line @next/next/no-img-element -- placeholder stock photo, not part of the optimized asset pipeline (same reasoning as PlaceholderImage) */}
                 <img
                   src="/images/placeholders/it-operations-noc.jpg"
                   alt=""

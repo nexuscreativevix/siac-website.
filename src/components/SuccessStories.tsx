@@ -50,10 +50,7 @@ const testimonials = [
 
 export function SuccessStories() {
   return (
-    <section
-      id="casos-de-sucesso"
-      className="relative scroll-mt-28 overflow-hidden py-lg"
-    >
+    <section id="casos-de-sucesso" className="relative scroll-mt-28 py-lg">
       <div className="relative mx-auto max-w-3xl px-sm pb-lg md:px-lg text-center">
         <p className="text-xs font-semibold tracking-[0.2em] text-brand-graphite/50 dark:text-brand-ice/50">
           CASOS DE SUCESSO
