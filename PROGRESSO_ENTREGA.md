@@ -69,3 +69,22 @@ uma credential helper). **Isso não bloqueia o trabalho desta noite**: todos os 
 ## Log
 
 - 2026-09-01 — Início do trabalho noturno. Git inicializado localmente; bloqueio de push documentado acima. Iniciando Prioridade 1.
+- 2026-09-01 — Prioridade 1 concluída e commitada (2 correções reais de texto).
+- 2026-09-01 — Prioridade 2 concluída e commitada (bug crítico de menu mobile + bug de overflow no tablet, ambos corrigidos; 3 screenshots enviados).
+- 2026-09-01 — Prioridade 3 concluída e commitada (bug real de navegação em "Casos de Sucesso" corrigido; build de produção limpo; otimização leve de imagens).
+- 2026-09-01 — **Trabalho noturno concluído.** Prioridade 4 (deploy) NÃO executada, conforme instruído. Aguardando você revisar pela manhã e confirmar antes de qualquer publicação na Vercel.
+
+## Resumo para revisão de amanhã
+
+**3 bugs reais encontrados e corrigidos** (nenhum estava no radar antes desta varredura):
+1. Menu de navegação inteiro invisível/inacessível no mobile (sem hambúrguer) — agora com menu funcional.
+2. Navbar do desktop transbordando a tela em tablets (768px), cortando o botão "Falar Conosco".
+3. Link "Casos de Sucesso" do menu não navegava para a seção (bug de CSS/overflow que quebrava a âncora).
+
+**2 correções de português:**
+1. "Ativos protegidos" → "ativos protegidos" (consistência de capitalização no Hero).
+2. "qualquer desses direitos" → "qualquer um desses direitos" (concordância na Política de Privacidade).
+
+**Estado do Git:** inicializado localmente, 3 commits feitos (um por prioridade), nenhum push realizado. Falta apenas você confirmar a URL do repositório GitHub (e autenticação, se privado) para eu configurar o remote e testar o push antes do deploy.
+
+**Nada foi publicado.** O site em localhost:3000 reflete todo o trabalho acima; a Vercel não foi tocada.
