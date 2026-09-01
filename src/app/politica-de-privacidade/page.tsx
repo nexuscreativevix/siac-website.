@@ -130,7 +130,7 @@ const SECTIONS = [
           <li>Revogação do consentimento e eliminação dos dados tratados com base nele.</li>
         </ul>
         <p className="mt-sm">
-          Para exercer qualquer desses direitos, entre em contato pelos
+          Para exercer qualquer um desses direitos, entre em contato pelos
           canais listados na seção 9.
         </p>
       </>

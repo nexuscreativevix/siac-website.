@@ -10,6 +10,7 @@
 - [x] Verificado: não havia repositório Git no projeto (`git status` → "not a git repository")
 - [x] Verificado: `gh` (GitHub CLI) não está instalado neste ambiente
 - [x] `git init` executado localmente
+- [x] Commit inicial local criado (baseline do projeto)
 - [ ] Remote do GitHub configurado
 - [ ] Push testado e funcionando
 
@@ -24,17 +25,17 @@ uma credential helper). **Isso não bloqueia o trabalho desta noite**: todos os 
 
 ## PRIORIDADE 1 — Conteúdo e Português
 
-- [ ] Hero
-- [ ] Manifesto / Quem Somos
-- [ ] Soluções (Elastic Gallery + modais "Saiba mais")
-- [ ] Ciclo SIAC
-- [ ] Casos de Sucesso (depoimentos)
-- [ ] Parceiros
-- [ ] Contato
-- [ ] Footer
-- [ ] Política de Privacidade
-- [ ] Conferido em modo claro e escuro
-- [ ] Commit local da Prioridade 1
+- [x] Hero — revisado; corrigida inconsistência de capitalização no stat "ativos protegidos"
+- [x] Manifesto / Quem Somos — texto oficial do manual de marca, sem alterações necessárias
+- [x] Soluções (Elastic Gallery + modais "Saiba mais") — revisado, reflete os 3 serviços reais (ERP Crítico, Resiliência Cibernética, Operação de TI)
+- [x] Ciclo SIAC — revisado (Diagnosticar/Estabilizar/Operar/Evoluir), tom Sábio mantido
+- [x] Casos de Sucesso (depoimentos) — 5 depoimentos revisados, linguagem natural e consistente
+- [x] Parceiros — revisado
+- [x] Contato — revisado
+- [x] Footer — revisado
+- [x] Política de Privacidade — revisado; corrigido erro de concordância ("qualquer desses direitos" → "qualquer um desses direitos")
+- [x] Conferido em modo claro e escuro — testado ao vivo no navegador (localhost:3000), ambos os temas renderizando corretamente, contraste dos labels e liquid glass ok
+- [x] Commit local da Prioridade 1
 
 ## PRIORIDADE 2 — Responsividade Mobile e Tablet
 

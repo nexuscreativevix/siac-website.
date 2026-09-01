@@ -15,7 +15,7 @@ import { VideoLightbox } from "@/components/ui/video-lightbox";
 const STATS = [
   { value: "Único no ES", label: "com Arquiteto Linux certificado Red Hat." },
   { value: "48 entre", label: "as 200 maiores do ES" },
-  { value: "5.000+", label: "Ativos protegidos" },
+  { value: "5.000+", label: "ativos protegidos" },
 ];
 
 const PILLARS = [
