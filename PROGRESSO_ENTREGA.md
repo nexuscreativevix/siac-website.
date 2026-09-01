@@ -1,0 +1,68 @@
+# Progresso da Entrega — SIAC Website
+
+> Atualizado em tempo real. Cada item só é marcado ✅ depois de testado de verdade.
+> **Deploy (Prioridade 4) está EXPLICITAMENTE BLOQUEADO até confirmação do cliente amanhã de manhã.**
+
+---
+
+## Setup — Git/GitHub
+
+- [x] Verificado: não havia repositório Git no projeto (`git status` → "not a git repository")
+- [x] Verificado: `gh` (GitHub CLI) não está instalado neste ambiente
+- [x] `git init` executado localmente
+- [ ] Remote do GitHub configurado
+- [ ] Push testado e funcionando
+
+**⚠️ BLOQUEIO:** Não há URL de repositório GitHub confirmada nem credenciais configuradas neste ambiente
+para autenticar push. Não tenho como resolver a parte de "push funcionando" sem que você informe a URL do
+repositório (e, se for privado, autentique — por exemplo rodando `gh auth login` manualmente ou configurando
+uma credential helper). **Isso não bloqueia o trabalho desta noite**: todos os commits abaixo são LOCAIS
+(`git commit`, sem `git push`), exatamente como pedido. Amanhã, me passe a URL do repo (ex.:
+`https://github.com/seu-usuario/siac-website.git`) que eu configuro o remote e testamos o push antes do deploy.
+
+---
+
+## PRIORIDADE 1 — Conteúdo e Português
+
+- [ ] Hero
+- [ ] Manifesto / Quem Somos
+- [ ] Soluções (Elastic Gallery + modais "Saiba mais")
+- [ ] Ciclo SIAC
+- [ ] Casos de Sucesso (depoimentos)
+- [ ] Parceiros
+- [ ] Contato
+- [ ] Footer
+- [ ] Política de Privacidade
+- [ ] Conferido em modo claro e escuro
+- [ ] Commit local da Prioridade 1
+
+## PRIORIDADE 2 — Responsividade Mobile e Tablet
+
+- [ ] Teste em mobile (viewport ~375px)
+- [ ] Teste em tablet (viewport ~768px)
+- [ ] Correções de layout aplicadas (se necessário)
+- [ ] Conferido em modo claro e escuro no mobile/tablet
+- [ ] Screenshot mobile — Hero
+- [ ] Screenshot mobile — Soluções
+- [ ] Screenshot mobile — Contato
+- [ ] Commit local da Prioridade 2
+
+## PRIORIDADE 3 — Otimização e Bugs Gerais
+
+- [ ] Build de produção rodado
+- [ ] Zero erros no console confirmado
+- [ ] Otimização de imagens/componentes pesados (sem mudar visual aprovado)
+- [ ] Varredura de bugs visuais (sobreposição, corte, animação travada, contraste)
+- [ ] Links do menu testados (Soluções, Casos de Sucesso, Quem Somos, Contato)
+- [ ] Botão WhatsApp testado
+- [ ] Commit local da Prioridade 3
+
+## PRIORIDADE 4 — Deploy
+
+- [ ] **NÃO EXECUTAR** — aguardando confirmação do cliente amanhã de manhã.
+
+---
+
+## Log
+
+- 2026-09-01 — Início do trabalho noturno. Git inicializado localmente; bloqueio de push documentado acima. Iniciando Prioridade 1.

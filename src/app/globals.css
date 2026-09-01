@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #efeeef;
+  --foreground: #282928;
+}
+
+.dark {
+  /* Grafite Estrutural, not Preto Absoluto — the manual documents this
+     exact hex as "the softer alternative to absolute black," which is what
+     the client asked for: still reads as black, just a little less dense
+     as the page-wide canvas. */
+  --background: #282928;
+  --foreground: #efeeef;
+}
+
+body {
+  color: var(--foreground);
+  /* Flat, solid surface — the brand manual and strategy briefing both say
+     explicitly to never run a gradient or texture as noise behind content
+     or running text. Any gradient/halftone moment is confined to bounded
+     "institutional" sections (Hero, Manifesto), never the whole page. */
+  background: var(--background);
+  transition: background-color 300ms ease, color 300ms ease;
+}
+
+/* Institutional halftone — a bounded decorative texture for the rare
+   sections the brand manual calls out (Hero, Manifesto), never applied to
+   the whole page. Apply to a `relative` section wrapper. */
+.institutional-halftone::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image: radial-gradient(circle, #9F211C 1.6px, transparent 1.6px);
+  background-size: 20px 20px;
+  background-position: 0 0;
+}
+
+.dark .institutional-halftone::before {
+  opacity: 0.18;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth 300ms cross-fade for every element's colors when the theme
+   switches — lives in @layer base so any component's own transition-*
+   utility (utilities layer, higher source order) overrides it untouched. */
+@layer base {
+  * {
+    transition-property: background-color, border-color, color;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+  }
+}
