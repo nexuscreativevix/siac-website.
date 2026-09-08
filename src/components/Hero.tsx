@@ -176,7 +176,7 @@ export function Hero() {
         {PILLARS.map((pillar, i) => {
           const content = (
             <>
-              <span className="text-xs font-semibold tracking-[0.15em] text-brand-primary">
+              <span className="text-xs font-bold tracking-[0.15em] text-brand-primary dark:text-[#D8453C]">
                 {pillar.label}
               </span>
               <span className="mt-xs block text-sm text-brand-graphite/70 dark:text-brand-ice/70">
