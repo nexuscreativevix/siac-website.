@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site institucional — SIAC Engenharia Digital
 
-## Getting Started
+Site institucional da SIAC (ERP Crítico, Resiliência Cibernética, Operação de TI), construído em Next.js.
 
-First, run the development server:
+**Site em produção:** https://siac-website-main.vercel.app
+
+## Stack
+
+- [Next.js 14](https://nextjs.org) (App Router) + TypeScript
+- [Tailwind CSS](https://tailwindcss.com) — tokens de marca (cores, espaçamento, sombras) em `tailwind.config.ts`
+- [Framer Motion](https://www.framer.com/motion/) — animações
+- [Swiper](https://swiperjs.com) — carrossel de depoimentos
+- [next-themes](https://github.com/pacocoursey/next-themes) — modo claro/escuro
+- Deploy: [Vercel](https://vercel.com), com deploy automático a cada `git push` na branch `main`
+
+## Rodando localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Outros comandos úteis:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build   # build de produção — sempre rode antes de subir uma mudança grande
+npm run lint    # checagem de lint
+npm run start   # roda o build de produção localmente
+```
 
-## Learn More
+## Estrutura do projeto
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/
+    page.tsx                      # monta a home a partir dos componentes de seção
+    politica-de-privacidade/      # página de Política de Privacidade
+  components/
+    Nav.tsx, Footer.tsx           # navegação (com menu mobile) e rodapé
+    Hero.tsx                      # seção inicial (título, vídeo, estatísticas, pilares)
+    Manifesto.tsx                 # seção "Quem Somos" / manifesto de marca
+    Solutions.tsx                 # seção "Nossas Soluções" (usa ui/elastic-gallery.tsx)
+    CycleTimeline.tsx             # seção "Ciclo SIAC" (usa ui/method-cycle.tsx)
+    SuccessStories.tsx            # seção "Casos de Sucesso" (usa ui/card-carousel.tsx)
+    Partners.tsx                  # faixa de logos de parceiros
+    Contact.tsx                   # formulário de contato
+    WhatsAppButton.tsx            # botão flutuante do WhatsApp
+    ui/                           # componentes menores e reutilizáveis
+brand/
+  SIAC_Briefing_para_Site.md      # briefing de marca (tom de voz, paleta, posicionamento)
+  logo/, partners/, background/   # ativos de marca em SVG/PNG
+public/images/placeholders/       # fotos de banco de imagens usadas como placeholder
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Pendências conhecidas (placeholders a substituir)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Alguns conteúdos ainda são placeholders temporários, aguardando material final da SIAC:
 
-## Deploy on Vercel
+- **Vídeos institucionais** (Hero e Manifesto): hoje mostram uma imagem estática com um aviso "Vídeo institucional em produção" ao clicar em play (`src/components/ui/video-lightbox.tsx`). Quando o vídeo real existir, trocar o conteúdo desse componente por um `<video>`.
+- **Vídeos de depoimentos** (Casos de Sucesso): mesma lógica — hoje mostram uma foto estática com aviso "Vídeo em produção" (`src/components/ui/card-carousel.tsx`). Os nomes de arquivo já esperados estão no array `testimonials` de `src/components/SuccessStories.tsx` (ex: `/videos/testimonials/glaucio-coelho.mp4`) — quando os vídeos existirem, basta colocá-los em `public/videos/testimonials/` e trocar o placeholder pelo `<video>`.
+- **Fotos de banco de imagens** em `public/images/placeholders/`: usadas em Hero, Manifesto e nos cards de Soluções até a SIAC entregar fotografia própria.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O projeto já está conectado à Vercel via GitHub: qualquer `git push` na branch `main` gera automaticamente um novo deploy de produção. Não é necessário rodar nenhum comando manual de deploy.
+
+## Manual de marca
+
+Antes de alterar textos, cores ou tom de voz, vale revisar `brand/SIAC_Briefing_para_Site.md` — ele documenta a paleta oficial, tipografia, arquétipo de marca (Sábio) e os pilares de posicionamento (Específica, Responsável, Comprovável) usados em todo o site.
