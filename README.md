@@ -66,6 +66,15 @@ Alguns conteúdos ainda são placeholders temporários, aguardando material fina
 
 O projeto já está conectado à Vercel via GitHub: qualquer `git push` na branch `main` gera automaticamente um novo deploy de produção. Não é necessário rodar nenhum comando manual de deploy.
 
+## Segurança — atualização do Next.js recomendada
+
+O projeto está no Next.js 14.2.35 (última versão da linha 14.x). Essa linha tem vulnerabilidades
+conhecidas cuja correção só existe na versão 16 (`npm audit` lista os detalhes e CVEs). Na prática,
+o risco atual é baixo porque o site é estático — não usa Server Actions, middleware, nem imagens
+remotas otimizadas via next/image — que é onde a maioria dessas falhas se explora. Ainda assim, é
+uma dívida técnica que vale planejar: atualizar para o Next.js 16 é uma mudança de versão maior
+(breaking change), então precisa ser feita com calma e testada seção por seção antes de publicar.
+
 ## Manual de marca
 
 Antes de alterar textos, cores ou tom de voz, vale revisar `brand/SIAC_Briefing_para_Site.md` — ele documenta a paleta oficial, tipografia, arquétipo de marca (Sábio) e os pilares de posicionamento (Específica, Responsável, Comprovável) usados em todo o site.
